@@ -20,8 +20,18 @@
                 <next>
                   <block type="controls_if" id="294" inline="false">
                     <value name="IF0">
-                      <block type="sensor_spectrometer" id="130">
-                        <field name="LIGHT">BLUE</field>
+                      <block type="logic_compare" id="450" inline="true">
+                        <field name="OP">LT</field>
+                        <value name="A">
+                          <block type="sensor_spectrometer" id="130">
+                            <field name="LIGHT">BLUE</field>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <block type="math_number" id="463">
+                            <field name="NUM">75</field>
+                          </block>
+                        </value>
                       </block>
                     </value>
                     <statement name="DO0">
