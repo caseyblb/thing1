@@ -4,8 +4,8 @@
       <block type="controls_whileUntil" id="17" inline="false">
         <field name="MODE">WHILE</field>
         <value name="NUMBER">
-          <block type="sensor_spectrometer" id="314">
-            <field name="LIGHT">BLUE</field>
+          <block type="sensor_button" id="425">
+            <field name="OBJECT">UP</field>
           </block>
         </value>
         <statement name="DO">
