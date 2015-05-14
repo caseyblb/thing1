@@ -1,1 +1,34 @@
-<xml xmlns="http://www.w3.org/1999/xhtml"></xml>
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="oled_cleardisplay" id="113" x="70" y="6">
+    <next>
+      <block type="controls_whileUntil" id="17" inline="false">
+        <field name="MODE">WHILE</field>
+        <statement name="DO">
+          <block type="movement_forward" id="149">
+            <next>
+              <block type="robot_delay" id="209" inline="true">
+                <value name="DELAY">
+                  <block type="math_number" id="231">
+                    <field name="NUM">0</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="controls_if" id="294" inline="false">
+                    <value name="IF0">
+                      <block type="sensor_spectrometer" id="130">
+                        <field name="LIGHT">BLUE</field>
+                      </block>
+                    </value>
+                    <statement name="DO0">
+                      <block type="movement_stop" id="313"></block>
+                    </statement>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </statement>
+      </block>
+    </next>
+  </block>
+</xml>
