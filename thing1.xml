@@ -28,36 +28,45 @@
                   </block>
                 </value>
                 <next>
-                  <block type="movement_forward" id="149">
+                  <block type="controls_if" id="294" inline="false">
+                    <value name="IF0">
+                      <block type="logic_compare" id="450" inline="true">
+                        <field name="OP">GT</field>
+                        <value name="A">
+                          <block type="sensor_spectrometer" id="130">
+                            <field name="LIGHT">GREEN</field>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <block type="math_number" id="463">
+                            <field name="NUM">95</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <statement name="DO0">
+                      <block type="movement_forward" id="149">
+                        <next>
+                          <block type="robot_delay" id="209" inline="true">
+                            <value name="DELAY">
+                              <block type="math_number" id="231">
+                                <field name="NUM">100</field>
+                              </block>
+                            </value>
+                            <next>
+                              <block type="movement_stop" id="313"></block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </statement>
                     <next>
-                      <block type="robot_delay" id="209" inline="true">
+                      <block type="robot_delay" id="507" inline="true">
                         <value name="DELAY">
-                          <block type="math_number" id="231">
+                          <block type="math_number" id="508">
                             <field name="NUM">100</field>
                           </block>
                         </value>
-                        <next>
-                          <block type="controls_if" id="294" inline="false">
-                            <value name="IF0">
-                              <block type="logic_compare" id="450" inline="true">
-                                <field name="OP">LT</field>
-                                <value name="A">
-                                  <block type="sensor_spectrometer" id="130">
-                                    <field name="LIGHT">GREEN</field>
-                                  </block>
-                                </value>
-                                <value name="B">
-                                  <block type="math_number" id="463">
-                                    <field name="NUM">75</field>
-                                  </block>
-                                </value>
-                              </block>
-                            </value>
-                            <statement name="DO0">
-                              <block type="movement_stop" id="313"></block>
-                            </statement>
-                          </block>
-                        </next>
                       </block>
                     </next>
                   </block>
@@ -68,5 +77,8 @@
         </next>
       </block>
     </statement>
+    <next>
+      <block type="movement_stop" id="506"></block>
+    </next>
   </block>
 </xml>
